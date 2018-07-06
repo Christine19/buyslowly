@@ -143,7 +143,7 @@
                                 2
                             </a>
                         </li>
-                        <li>
+                        <li class="mui-active">
                             <a href="#">
                                 3
                             </a>
@@ -153,18 +153,18 @@
                                 4
                             </a>
                         </li>
-                        <li class="mui-active">
+                        <li>
                             <a href="#">
                                 5
                             </a>
                         </li>
-                        <li class="mui-next mui-disabled">
+                        <li class="mui-next">
                             <a href="#">
-                               下一页
+                                下一页
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> 
       </div>
       <div class="getcai">
           <div class="cai">
@@ -181,5 +181,53 @@
       </div>
  </div>
 </body>                                                                   
-</html>   
+</html>  
+<script>
+    		mui.init({
+			swipeBack:true //启用右滑关闭功能
+			});
+			(function($) {
+				$('.mui-pagination').on('tap', 'a', function() {
+					var li = this.parentNode;
+					var classList = li.classList;
+					if (!classList.contains('mui-active') && !classList.contains('mui-disabled')) {
+						var active = li.parentNode.querySelector('.mui-active');
+						if (classList.contains('mui-previous')) {//previous
+							if (active) {
+								var previous = active.previousElementSibling;
+								console.log('previous', previous);
+								if (previous && !previous.classList.contains('mui-previous')) {
+									$.trigger(previous.querySelector('a'), 'tap');
+								} else {
+									classList.add('mui-disabled');
+								}
+							}
+						} else if (classList.contains('mui-next')) {//next
+							if (active) {
+								var next = active.nextElementSibling;
+								if (next && !next.classList.contains('mui-next')) {
+									$.trigger(next.querySelector('a'), 'tap');
+								} else {
+									classList.add('mui-disabled');
+								}
+							}
+						} else {//page
+							active.classList.remove('mui-active');
+							classList.add('mui-active');
+							var page = parseInt(this.innerText);
+							var previousPageElement = li.parentNode.querySelector('.mui-previous');
+							var nextPageElement = li.parentNode.querySelector('.mui-next');
+							previousPageElement.classList.remove('mui-disabled');
+							nextPageElement.classList.remove('mui-disabled');
+							if (page <= 1) {
+								previousPageElement.classList.add('mui-disabled');
+							} else if (page >= 5) {
+								nextPageElement.classList.add('mui-disabled');
+							}
+						}
+					}
+				});
+			})(mui);
+
+</script> 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
