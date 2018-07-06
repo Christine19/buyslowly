@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,134 +11,105 @@
     <!-- 引入Mui -->
     <script src="./lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
-     <!-- 引入模板引擎 -->
-     <script src="./lib/artTemplate/template-web.js"></script>
-     <!--  -->
-     <script src="./js/common.js"></script>
-     <script src="./js/03.3-gnzk.js"></script>
-     <link rel="stylesheet" href="./css/03.3-gnzk.css">
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!--  -->
+    <script src="./js/common.js"></script>
+    <script src="./js/03.3-gnzk.js"></script>
+    <link rel="stylesheet" href="./css/03.3-gnzk.css">
 
 </head>
+
 <body>
     <div class="container">
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
                 <!-- 头部 -->
-                    <header>
-                        <span class="mui-icon mui-icon-back"></span>
-                        <h1>国内折扣</h1>
-                        <a>
-                            <span class="mui-icon mui-icon-download"></span>
-                            <span>APP下载</span>
-                        </a>
-                        
-                    </header>
-                    <!-- 主体 -->
-                    <main>
+                <header>
+                    <span class="mui-icon mui-icon-back"></span>
+                    <h1>国内折扣</h1>
+                    <a>
+                        <span class="mui-icon mui-icon-download"></span>
+                        <span>APP下载</span>
+                    </a>
+
+                </header>
+                <!-- 主体 -->
+                <main>
+                    <!-- 动态渲染模板S -->
+                    <script id="productinfo" type="text/html">
+                        {{each result}}
+
                         <div class="product">
                             <!-- 标题部 -->
-                            <h3>rikang 日康 婴儿手口湿巾  80片 12包 *2件</h3>
-                            <h4>89元（合44.5元/件）</h4>
+                            <h3>{{$value.productName}}</h3>
+                            <h4>{{$value.productPinkage}}</h4>
                             <!-- 信息部 -->
                             <div class="info">
-                                <span class="mall">京东商城</span>
-                                <span class="addtime" style="margin-right: 4px;">07-06 11:30</span>
-                                <span class="author">小豪13141314 / 慢慢买</span>
+                                <span class="mall">{{$value.productFrom}}</span>
+                                <span class="addtime" style="margin-right: 4px;">{{$value.productTime}}</span>
+                                <span class="author">{{$value.productTips}}</span>
                             </div>
                             <!-- 内容 -->
                             <div class="content clearfix">
-      
-                                <div class="picwrap"><img src="http://wnzk-img.zuyushop.com/r_img/img/20180706/11/e50d4609ea77487b87e25390b36dba93.jpg" alt="rikang 日康 婴儿手口湿巾  80片 12包 *2件"></div>
-                                
-                                <div class="conn"><!--内容开始--> 
-                                <p>日康是国内知名婴儿用品品牌，这款日康婴儿湿巾，精选棉柔无纺布，触感舒适，厚实强韧，耐拉耐扯，添加植物精华和可食用级木糖醇，手口可用，双层封盖设计，防止水分流失，保持湿巾水润。</p>                                        <p itemprop='description'><a href='http://www.manmanbuy.com/redirectUrl.aspx?spid=0&webid=1&tourl=https%3a%2f%2fitem.jd.com%2f5700036.html' target='_blank'>京东</a>plus价格为89元，下单2件可2件5折，实际支付89元，可凑单也可免邮券带回，感兴趣的慢友可关注。</p>
-                                  <!--内容结束--></div>
+
+                                <div class="picwrap">
+                                    {{#$value. productImgSm}}
+                                </div>
+
+                                <div class="conn">
+                                    <!--内容开始-->
+                                    <p>{{$value.productInfo}}</p>
+                                    <p itemprop='description'>
+                                        <a href='http://www.manmanbuy.com/redirectUrl.aspx?spid=0&webid=1&tourl=https%3a%2f%2fitem.jd.com%2f5700036.html' target='_blank'>京东</a>{{$value.productInfo1}}</p>
+                                    <!--内容结束-->
+                                </div>
                             </div>
                             <!-- 前往购买 -->
                             <div class="golink">
-                                <a href="redirect.aspx?webid=1&amp;tourl=https%3a%2f%2fitem.jd.com%2f5700036.html&amp;y=cu&amp;cxid=349212" target="_blank" class="a-gobuy">
+                                <a href="redirect.aspx?webid=1&amp;tourl=https%3a%2f%2fitem.jd.com%2f5700036.html&amp;y=cu&amp;cxid=349212" target="_blank"
+                                    class="a-gobuy">
                                     <i class="icon-gobuy">
                                     </i>前往购买</a>
                             </div>
                             <!-- 评论区 -->
-                            <div class="comment">
+                           {{#$value.productComment}}
+                        </div>
+                        {{/each}}
+                    </script>
+                    <!-- 动态渲染模板E -->
 
-                                <div class="tit">发表评论</div>
-
-                                <div class="form">
-                                    <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
-                                   
-                                   
-                                    <div class="placeholder">
-                                        <input type="submit" name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1">
-                                    </div>
-
-                                </div>
-
-                                <div class="newtit" id="newcomment">最新评论</div>
-                                <!-- 评论列表 -->
-                                <div class="list" id="listnew">
-
-                                    <ul>
-
-                                        <li class="ui-border-b">
-                                            <div class="userimg">
-                                                <img src="http://bbs.manmanbuy.com/images/face/none.gif">
-                                            </div>
-                                            <div class="con">
-                                                <div class="name clearfix">
-                                                    <div class="username">tinyhero</div>
-                                                    <div class="time">2018/7/6 11:43:28</div>
-                                                </div>
-                                                <div class="content">这件我前阵子79两件买过，包装挺好的，打开试用不连张，感觉是正经东西。价格还不错</div>
-                                            </div>
-                                        </li>
-
-                                        <li class="ui-border-b">
-                                            <div class="userimg">
-                                                <img src="http://bbs.manmanbuy.com/images/face/none.gif">
-                                            </div>
-                                            <div class="con">
-                                                <div class="name clearfix">
-                                                    <div class="username">tinyhero</div>
-                                                    <div class="time">2018/7/6 11:43:28</div>
-                                                </div>
-                                                <div class="content">这件我前阵子79两件买过，包装挺好的，打开试用不连张，感觉是正经东西。价格还不错</div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
+                </main>
+                <div class="nav">
+                    <a href="./index.html">首页</a>
+                    &nbsp;&gt;&nbsp;
+                    <a href="./09-stroenav.html">省钱控</a>
+                    &nbsp;&gt;&nbsp;
+                    <a href="./03.3-gnzk.html">3COLOUR 三彩 D742185D00 女士羊毛大衣</a>
+                </div>
+                <footer>
+                    <div class="top">
+                        <a class="login">登录</a>
+                        <a class="regist">注册</a>
+                        <a class="toTop">
+                            <div>
+                                <img src="./images/top.jpg" alt="">
                             </div>
-                        </div>
-                    </main>
-                    <div class="nav">
-                        <a href="./index.html">首页</a>
-                        &nbsp;&gt;&nbsp;
-                        <a href="./09-stroenav.html">省钱控</a>
-                        &nbsp;&gt;&nbsp;
-                        <a href="./03.3-gnzk.html">3COLOUR 三彩 D742185D00 女士羊毛大衣</a>
+                            <span>返回顶部</span>
+                        </a>
                     </div>
-                    <footer>
-                        <div class="top">
-                            <a class="login">登录</a>
-                            <a class="regist">注册</a>
-                            <a class="toTop">
-                                <div><img src="./images/top.jpg" alt=""></div>    
-                                <span>返回顶部</span>
-                            </a>
-                        </div>
-                        <div class="bottom">
-                            <p>
-                                <a href="">手机APP下载</a>
-                                <a href="">慢慢买手机版</a>
-                                <a >--掌上比价平台</a>
-                            </p>
-                            <p> m.manmanbuy.com </p>
-                        </div>
-                    </footer>
+                    <div class="bottom">
+                        <p>
+                            <a href="">手机APP下载</a>
+                            <a href="">慢慢买手机版</a>
+                            <a>--掌上比价平台</a>
+                        </p>
+                        <p> m.manmanbuy.com </p>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
 </body>
+
 </html>

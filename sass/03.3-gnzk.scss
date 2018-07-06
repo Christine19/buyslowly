@@ -106,7 +106,7 @@
                     color: #ffffff;
                 }
             }
-            .comment{
+            .cu-content-pl{
                border-top: 1px solid #e0e0e0;
                border-bottom: 1px solid #e0e0e0;
                .tit{
@@ -118,7 +118,7 @@
                        
                         border-bottom: none;
                     }
-                    .placeholder{
+                    .ctrl{
                         position: relative;
                         border-bottom: 1px solid #ccc;
                         border-right: 1px solid #ccc;
@@ -140,7 +140,7 @@
                    
                 }
 
-                .newtit{
+                #newcomment{
                     font-size: 16px;
                     padding: 6px 8px;
                 }
@@ -169,7 +169,7 @@
                             justify-content: space-between;
                         }
                         .content{
-                            margin-top: 9px;
+                            margin-top: 5px;
                         }
                     }
                 }

@@ -5,21 +5,33 @@ $(function () {
         window.history.go(-1);
     })
 
+// 地址栏解析
+    function parseURL(url) {
+        var result = [];
+        var query = url.split("?")[1];
+        var queryArr = query.split("&");
+        var params = {};
+        queryArr.forEach(function (item) {
+            var key = item.split("=")[0];
+            var value = item.split("=")[1];
+            params[key] = value;
+        });
+        return params;
+    }
 
-
-
-
+    var  params = parseURL(window.location.href);
+    var productid =params.productid;
 
 
     // 发送ajax请求
     $.ajax({
-    url:'http://m.manmanbuy.com/HzSite.aspx',
-    data:{},
+    url:'http://mmb.ittun.com/api/getmoneyctrlproduct',
+    data:{productid :20},
     type:'GET',
     success:function (backData) {
-    console.log(backData);
-    var result=template('friendslink',backData)
-    $('.friends').html(result);
+    // console.log(backData);
+    var result=template('productinfo',backData)
+    $('main').html(result);
     }
     })
 })
