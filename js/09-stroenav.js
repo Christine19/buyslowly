@@ -21,7 +21,7 @@ $(function () {
     data:{},
     type:'GET',
     success:function (backData) {
-    console.log(backData);
+    // console.log(backData);
     var result=template('friendslink',backData)
     $('.friends').html(result);
     }
