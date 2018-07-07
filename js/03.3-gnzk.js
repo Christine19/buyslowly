@@ -4,7 +4,6 @@ $(function () {
         // alert(1);
         window.history.go(-1);
     })
-
 // 地址栏解析
     function parseURL(url) {
         var result = [];
@@ -26,10 +25,10 @@ $(function () {
     // 发送ajax请求
     $.ajax({
     url:'http://mmb.ittun.com/api/getmoneyctrlproduct',
-    data:{productid :20},
+    data:{productid :productid},
     type:'GET',
     success:function (backData) {
-    // console.log(backData);
+    console.log(backData);
     var result=template('productinfo',backData)
     $('main').html(result);
     }
