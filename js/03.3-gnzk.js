@@ -18,14 +18,14 @@ $(function () {
         return params;
     }
 
-    var  params = parseURL(window.location.href);
-    var productid =params.productid;
+    // var  params = parseURL(window.location.href);
+    // var productid =params.productid;
 
 
     // 发送ajax请求
     $.ajax({
     url:'http://mmb.ittun.com/api/getmoneyctrlproduct',
-    data:{productid :productid},
+    data:{productid :20},
     type:'GET',
     success:function (backData) {
     console.log(backData);
