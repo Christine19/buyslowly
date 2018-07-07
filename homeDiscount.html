@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>
+			省钱快曝 -- 慢慢买
+		</title>
+		<link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/homeDiscount.css"/>
+		<script src="lib/zepto/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/artTemplate/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/homeDiscount.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!--这里放置真实显示的DOM内容-->
+						<div class="head"  id="toping">
+							<div class="back">
+								<a href="index.html" class="mui-icon mui-icon-back"></a>
+							</div>
+							<h1>国内折扣</h1>	
+							<div class="home">
+								<a href="#"><img src="images/app.png"/></a>
+							</div>
+						</div>
+						<ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="shang">
+					<a>登录</a>
+					<a>注册</a>
+					<a href="#toping" id="topping"><img src="images/top.jpg"/>返回顶部</a>
+				</div>
+				<div class="xia">
+					<p>
+						<a href="#" class="red">手机app下载</a>
+						<a href="#" class="black">慢慢买手机版</a>
+						--掌上比价平台
+					</p>
+					<p>m.manmanbuy.com</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/html" id="queryList">
+	{{each result}}
+	<li>
+		<a href="#" class="goods" data-id="{{$value.productId}}">
+			<div class="img">{{@$value.productImg}}</div>
+			<p class="title mui-ellipsis-2" >{{$value.productName}}</p>
+			<p class="price mui-ellipsis">{{$value.productPrice}}</p>
+			<p class="info">{{$value.productFrom}} | 2018-{{$value.productTime}}</p>
+		</a>
+	</li>
+	{{/each}}
+</script>
