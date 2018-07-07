@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, p, b {
   margin: 0;
   padding: 0;
@@ -109,79 +110,51 @@ body {
   margin-top: 0.1333333333rem;
 }
 
-.content .mui-scroll .headline {
-  text-align: center;
-  font-size: 0.2666666667rem;
-  line-height: 0.9333333333rem;
+.bd {
+  margin: 0.3333333333rem 0;
 }
-.content .mui-scroll .particulars {
-  margin-top: 0.2rem;
+.bd ul {
+  display: flex;
+  flex-wrap: wrap;
 }
-.content .mui-scroll .particulars li {
-  height: 3.6rem;
+.bd ul li {
+  width: 3.0933333333rem;
+  height: 2.1333333333rem;
+  border: 0.0133333333rem solid #eee;
+  margin: 0.1066666667rem;
+}
+.bd ul li a {
   width: 100%;
-  border-bottom: 1px solid #e7e7e7;
-}
-.content .mui-scroll .particulars li a {
   height: 100%;
-  width: 100%;
-  display: inline-block;
-  padding: 0.2666666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.content .mui-scroll .particulars li a .left {
-  float: left;
-  width: 2.9333333333rem;
-  height: 100%;
+.bd ul li a img {
+  width: 1.3333333333rem;
 }
-.content .mui-scroll .particulars li a .left img {
-  width: 2.5333333333rem;
-}
-.content .mui-scroll .particulars li a .right {
-  padding-right: 0.5333333333rem;
-  position: relative;
-}
-.content .mui-scroll .particulars li a .right .describe {
-  color: #333;
-  font-size: 0.36rem;
-  line-height: 0.5333333333rem;
-}
-.content .mui-scroll .particulars li a .right .price {
-  color: #333;
-}
-.content .mui-scroll .particulars li a .right .deadline {
-  color: #EE7700;
-  margin-top: 0.1333333333rem;
-  font-size: 0.2133333333rem;
-}
-.content .mui-scroll .particulars li a .right .icon {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -0.4666666667rem;
+.bd ul li a p {
+  margin: 0;
+  font-size: 0.24rem;
+  color: #666;
 }
 
-#galleryOverlay {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 30;
-  opacity: 0;
-  transform: background-color 2s ease;
+.nav {
+  height: 0.96rem;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #cccccc;
+  margin-top: 0.6666666667rem;
+  background: linear-gradient(#fff, #ececec);
+  /* 标准的语法（必须放在最后） */
 }
-#galleryOverlay img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -100px;
-  margin-top: -75px;
-  width: 200px;
+.nav a {
+  font-size: 0.3733333333rem;
+  color: #000;
+  line-height: 0.96rem;
 }
-#galleryOverlay.visible {
-  opacity: 1;
+.nav a:nth-child(1) {
+  padding-left: 0.2rem;
 }
 
 .bottom {
@@ -234,4 +207,4 @@ body {
   line-height: 0.3466666667rem;
 }
 
-/*# sourceMappingURL=list.css.map */
+/*# sourceMappingURL=coupon.css.map */
