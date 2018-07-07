@@ -16,6 +16,7 @@
     <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 自己写的js -->
     <script src="./js/common.js"></script>
+    <script src="./js/arr.js"></script>
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- mui css -->
@@ -113,7 +114,7 @@
 <script type="text/html" id="productitem">
     {{each result}}
     <div class="product">
-            <a href="http://m.manmanbuy.com/bijia.aspx?id=440179" class="goto"></a>
+            <a href="commodity.html?id={{$value.productId}}" class="goto"></a>
             <div class="pic">
                 {{#$value.productImg}}
             </div>

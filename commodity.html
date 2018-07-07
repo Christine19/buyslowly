@@ -16,15 +16,13 @@
     <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 自己写的js -->
     <script src="./js/common.js"></script>
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- mui css -->
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <!-- 字体图标 -->
     <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
     <!-- 自己写的css 这个css不要轻易修改 如果公共部分不同到自己的css里写权重比他高就可以改的到-->
-    <script src="./js/commodity.js"></script>
     <link rel="stylesheet" href="./css/commodity.css">
+    <script src="./js/commodity.js"></script>
 </head>
 
 <body>
@@ -57,9 +55,9 @@
                 </div>
                 <div class="detail-head">
                     <div class="pic">
-                        <img src="./img/商品.jpg" alt="">
+                        <img src="./images/商品.jpg" alt="">
                         <a href="">
-                            <img src="./img/收藏.jpg" alt="">
+                            <img src="./images/收藏.jpg" alt="">
                         </a>
                     </div>
                     <div class="tit">
@@ -154,7 +152,7 @@
 
 
                 <div class="pj_list">
-                      <ul>
+                      <ul class="comm">
                           <li>
                                 <p class="name">
                                         <span >荒***猬</span>
@@ -212,3 +210,39 @@
 </body>
 
 </html>
+<script type="text/html" id="productdetail">
+    {{each result}}
+    <div class="pic">
+            {{#$value.productImg}}
+            <a href="">
+                <img src="./images/收藏.jpg" alt="">
+            </a>
+        </div>
+        <div class="tit">
+           {{$value.productName}}
+        </div>
+        <div class="inf">
+            <span >当前最低: ￥2499.00</span>
+            <span>优选评论:6683条</span>
+        </div> 
+        {{/each}}
+</script>
+<script type="text/html" id="comitem">
+            {{each result}}
+            <li>
+                  <p class="name">
+                          <span >{{$value.comName}}</span>
+                          <span >{{$value.comTime}}</span>
+                      </p>
+                      <p class="grade">
+                          <span class="xin" >★★★★★</span>
+                          <span >{{$value.comFrom}}</span>
+                      </p>
+                      <p class="content">
+                              {{$value.comContent}}
+                      </p>
+                      <a href="">回复</a>
+            </li>
+            {{/each}}
+        
+</script>
