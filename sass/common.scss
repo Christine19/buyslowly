@@ -24,6 +24,12 @@ html,body{
 @function pr($p) {
     @return $p/75+rem;
 }
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
 
 .container{
     height: 100%;

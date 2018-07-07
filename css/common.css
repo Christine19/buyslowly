@@ -24,6 +24,14 @@ html, body {
   font-size: 14px;
 }
 
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
 .container {
   height: 100%;
   width: 100%;

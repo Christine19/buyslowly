@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <!-- zepto js -->
+    <script src="./lib/bootstrap/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 自己写的js -->
+    <script src="./js/common.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- mui css -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+    <!-- 自己写的css 这个css不要轻易修改 如果公共部分不同到自己的css里写权重比他高就可以改的到-->
+    <link rel="stylesheet" href="./css/product.css">
+    <script src="./js/product.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+            <!-- 内部滚动 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="topbar">
+                        <div class="logo">
+                            <a href="" title="慢慢买比价网--手机版"><img src="https://img.alicdn.com/imgextra/i1/690311/TB2cMR0aQUmBKNjSZFOXXab2XXa_!!690311.png" alt="慢慢买比价网--手机版"></a>
+                        </div>
+                        <div class="appload">
+                            <a href="" title="手机app下载"><img src="https://img.alicdn.com/imgextra/i2/690311/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png" alt="手机app下载"></a>
+                        </div>
+                    </div>
+                    <div class="searchbar">
+                            <input type="text" class="search" placeholder="请输入你想比价的商品">
+                            <button class="ssbtn">搜索</button>
+                        </div> 
+                        <div class="category1">
+                            <ul>
+                                <li class="active"><a href="">综合</a></li>
+                                <li><a href="">销量</a></li>
+                                <li class="price"><a href="">价格</a></li>
+                                <li class="filter"><a href=""><span class="glyphicon glyphicon-filter"></span>筛选</a></li>
+                            </ul>
+                        </div>
+                        <div class="main">
+                            <div class="product">
+                                    <a href="http://m.manmanbuy.com/bijia.aspx?id=440179" class="goto"></a>
+                                    <div class="pic">
+                                        <img src="http://pro-img.zuyushop.com/ProPic/20171/small80/Thumb_2017010014590862260.jpg" alt="创维(Skyworth) 55V6 55英寸 IPS硬屏64位芯片4K智能液晶平板电视">
+                                    </div>
+                                    <div class="clearfix inf">
+                                        <div class="tit mui-ellipsis-2">创维(Skyworth) 55V6 55英寸 IPS硬屏64位芯片4K智能液晶平板电视</div>
+                                        <div class="price">
+                                            <em>¥</em>2499</div>
+                                        <div class="other">
+                                            <div class="mall">5商城报价</div>
+                                            <div class="sales">有6681人评论</div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>  
+                        
+                        <div class="pagitation">
+                            <button class="previous">上一页</button>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="text">dropdown</span>
+                                  <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                  <li><a>Action</a></li>
+                                </ul>
+                              </div>    
+                            <button type="button" class="next">下一页</button>
+                        </div>
+                        <!-- 渲染分页的数据 -->
+                        <script type="text/html" id="pagehitem">
+                            {{each data v i}}
+                            <li><a href="#">{{v}}</a></li>
+                            {{/each}}
+                        </script>
+                    <div class="footer">
+                        <div class="foottop">
+                            <a href="">登录</a>
+                            <a href="">注册</a>
+                            <a href=""><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                        </div>
+                        <div class="footbottom">
+                            <p class="download"><a href="">手机APP下载</a><a href="">慢慢买手机版</a> -- 掌上比价平台</p>
+                            <p class="address">m.manmanbuy.com</p>
+                        </div>
+                    </div>
+                   
+                    <!--这里放置真实显示的DOM内容-->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/html" id="productitem">
+    {{each result}}
+    <div class="product">
+            <a href="http://m.manmanbuy.com/bijia.aspx?id=440179" class="goto"></a>
+            <div class="pic">
+                {{#$value.productImg}}
+            </div>
+            <div class="clearfix inf">
+                <div class="tit mui-ellipsis-2">{{$value.productName}}</div>
+                <div class="price">
+                    {{$value.productPrice}}</div>
+                <div class="other">
+                    <div class="mall">{{$value.productQuote}}</div>
+                    <div class="sales">{{$value.productCom}}</div>
+                </div>
+            </div>
+    </div>
+    {{/each}}
+</script>
