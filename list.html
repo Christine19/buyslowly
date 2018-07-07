@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <!-- zepto js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+
+    <script src="./lib/swiper/swiper.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 自己写的js -->
+    <script src="./js/common.js"></script>
+    <script src="./js/list.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <!-- mui css -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+    <!-- 自己写的css 这个css不要轻易修改 如果公共部分不同到自己的css里写权重比他高就可以改的到-->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <!-- logo不同到官网看 -->
+            <a href="javascript: back();" class="logo">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <div class="searchbar">
+                <p class="title">
+                    <span class="titles">全部</spa>
+                </p>
+                <span class="mui-icon mui-icon-arrowdown"></span>
+            </div>
+            <a href="" class="icon">
+                <!-- 字体图标根据页面不同自己到官网看 -->
+                <img src="./img/APP下载.png" alt="">
+            </a>
+        </div>
+        <!-- 主要内容 -->
+        <div class="content">
+            <!-- 内部滚动 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <!-- tab栏 -->
+                    <div class="tab">
+                        <ul>
+                            <li class="active">
+                                <a href="">人气</a>
+                            </li>
+                            <li>
+                                <a href="">最新</a>
+                            </li>
+                            <li>
+                                <a href="">销量</a>
+                            </li>
+                            <li>
+                                <a href="">价格</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="details">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <script type="text/html" id="popular">
+                        {{each result}}
+                        <li>
+                            <div class="img">
+                                {{#$value.productImg}}
+                            </div>
+                            <!-- 内容 -->
+                            <div class="matter">
+                                <p class="productName intro mui-ellipsis-2">
+                                    {{#$value.productName}}
+                                </p>
+                                <p class="productPrice">
+                                    {{#$value.productPrice}}
+                                </p>
+                                {{#$value.productCouponRemain}}
+                                <div class="discounts">
+                                    {{#$value.productCoupon}} {{#$value.productHref}}
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+
+                    <div class="footer">
+                        <div class="foot_top">
+                            <a href="">登录</a>
+                            <a href="">注册</a>
+                            <a href="">
+                                <img src="./img/top.jpg" alt="">返回顶部</a>
+                        </div>
+                        <div class="foot_di">
+                            <div class="box">
+                                <p>
+                                    <span class="app">手机APP下载</span>
+                                    <span class="man">
+                                        慢慢买手机版</span> -- 掌上比价平台</p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--这里放置真实显示的DOM内容-->
+                </div>
+            </div>
+        </div>
+        <a class="gotop iconfont" id="gotop" href="javascript:;" style="display: inline;"></a>
+
+        <!-- 遮罩层 分类-->
+        <div class="category active">
+            <!-- 遮罩层 -->
+            <div class="mask"></div>
+            <!-- 分类列表 -->
+            <div class="category-content">
+                <ul class="categories">
+                    <li>
+                        <a href="">全部</a>
+                    </li>
+                    <li>
+                        <a href="">热销</a>
+                    </li>
+                    <li>
+                        <a href="">9块9包邮</a>
+                    </li>
+                    <li>
+                        <a href="">19块邮</a>
+                    </li>
+                    <li>
+                        <a href="">数码家电</a>
+                    </li>
+                    <li>
+                        <a href="">居家</a>
+                    </li>
+                    <li>
+                        <a href="">美食</a>
+                    </li>
+                    <li>
+                        <a href="">男装</a>
+                    </li>
+                    <li>
+                        <a href="">女装</a>
+                    </li>
+                    <li>
+                        <a href="">鞋包配饰</a>
+                    </li>
+                    <li>
+                        <a href="">文体</a>
+                    </li>
+                    <li>
+                        <a href="">母婴</a>
+                    </li>
+                    <li>
+                        <a href="">美妆</a>
+                    </li>
+                    <li>
+                        <a href="">玩具</a>
+                    </li>
+
+
+                    <!-- 分类模板 -->
+                    <script type="text/html" id="categoriesid">
+                        {{each result}}
+                        <li>
+                            <a href="list.html?titleid={{$value.titleId}}">{{$value.title}}</a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+                <span class="upmenu">收起分类</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
+    var swiper1 = new Swiper('.swiper-container1', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
