@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <script src="./js/common.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/list.js"></script>
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+
+<body>
+    <div id="galleryOverlay">
+        <!-- <img src="./img/巨星.jpg" alt=""> -->
+    </div>
+    <div class="container">
+        <div class="head">
+            <div class="back">
+                <span class="mui-icon mui-icon-back"></span>
+            </div>
+            <h1>肯德基优惠券</h1>
+            <div class="home">
+                <a href="">
+                    <img src="./img/APP下载.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <!-- 内部滚动 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <!-- 轮播图 -->
+                    <p class="headline">--点餐前出示手机中的优惠券,即可享受优惠--</p>
+                    <ul class="particulars">
+
+                    </ul>
+                    <!--这里放置真实显示的DOM内容-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script id="par" type="text/html">
+    {{each result}}
+    <li data-tu="{{$value.couponProductImg}}">
+        <a>
+            <div class="left">
+                {{#$value.couponProductImg}}
+            </div>
+            <div class="right">
+                <p class="describe">{{$value.couponProductName}}</p>
+                <p class="price">{{$value.couponProductPrice}}</p>
+                <p class="deadline">{{$value.couponProductTime}}</p>
+                <p class="icon">
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
