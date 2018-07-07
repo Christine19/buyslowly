@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>慢慢买首页</title>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <script src="./lib/artTemplate/template-web.js"></script>
@@ -15,6 +16,7 @@
         // document.querySelector("html").style.fontSize = window.screen.width / 10 + "px";
     </script>
 </head>
+
 <body>
     <div style="position: fixed;right: 0;bottom: 20px;z-index: 999;">
         <a href="">
@@ -23,8 +25,12 @@
     </div>
     <!-- 头部logo -->
     <div class="top">
-        <a href="" class="logo"><img src="./images/TB2cMR0aQUmBKNjSZFOXXab2XXa_!!690311.png" alt=""></a>
-        <a href="" class="app"><img src="./images/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png" alt=""></a>
+        <a href="" class="logo">
+            <img src="./images/TB2cMR0aQUmBKNjSZFOXXab2XXa_!!690311.png" alt="">
+        </a>
+        <a href="" class="app">
+            <img src="./images/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png" alt="">
+        </a>
     </div>
     <!-- 头部搜索 -->
     <div class="search">
@@ -90,15 +96,15 @@
                 </p>
             </div>
         </div>
-    </div> 
+    </div>
 </body>
 <!-- 分类 -->
 <script type="text/html" id="list">
+
     {{each result}}
         <li style="display: none;">
-            <a href="">
-                {{#$value.img}}
-                {{$value.name}}
+            <a href="{{$value.titlehref}}">
+                {{#$value.img}} {{$value.name}}
             </a>
         </li>
     {{/each}}
@@ -106,26 +112,27 @@
 <!-- 商品 -->
 <script type="text/html" id="userinfo">
     {{each result}}
-        <li class="catalogue">
-            <a href="" class="tiaozhuan">
-                <div class="pic">
-                    {{#$value.productImgSm}}
+    <li class="catalogue">
+        <a href="" class="tiaozhuan">
+            <div class="pic">
+                {{#$value.productImgSm}}
+            </div>
+            <div class="info">
+                <div class="title">
+                    <a href="" class="brand">{{$value.productName}}</a>
+                    <span>{{$value.productPinkage}}</span>
                 </div>
-                <div class="info">
-                    <div class="title">
-                        <a href="" class="brand">{{$value.productName}}</a>
-                        <span>{{$value.productPinkage}}</span>
-                    </div> 
-                    <div class="other">
-                        <span class="mall">苏宁易购|{{$value.productTime}}</span>
-                        <span class="comment">
-                            <i class="glyphicon glyphicon-comment"></i>
-                            {{$value.productComCount}}
-                        </span>
-                    </div>
+                <div class="other">
+                    <span class="mall">苏宁易购|{{$value.productTime}}</span>
+                    <span class="comment">
+                        <i class="glyphicon glyphicon-comment"></i>
+                        {{$value.productComCount}}
+                    </span>
                 </div>
-            </a>  
-        </li>
+            </div>
+        </a>
+    </li>
     {{/each}}
 </script>
-</html> 
+
+</html>

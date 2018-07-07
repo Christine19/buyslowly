@@ -159,6 +159,57 @@ body {
   right: 0;
   margin-top: -0.4666666667rem;
 }
+.content .mui-scroll .footer {
+  display: flex;
+  flex-direction: column;
+  height: 2.56rem;
+  margin-top: 0.6666666667rem;
+}
+.content .mui-scroll .footer .foottop {
+  border-top: 0.0133333333rem solid #ccc;
+  border-bottom: 0.0133333333rem solid #ccc;
+  height: 0.9066666667rem;
+  display: flex;
+  align-items: center;
+}
+.content .mui-scroll .footer .foottop a {
+  display: inline-block;
+  height: 100%;
+  font-size: 0.3733333333rem;
+  width: 30%;
+  text-align: center;
+  line-height: 0.9066666667rem;
+  border-right: 0.0133333333rem solid #c4c4c4;
+}
+.content .mui-scroll .footer .foottop a:nth-child(3) {
+  border-right: none;
+  padding-left: 0.8rem;
+}
+.content .mui-scroll .footer .foottop a:nth-child(3) img {
+  height: 0.3733333333rem;
+}
+.content .mui-scroll .footer .footbottom {
+  height: 1.6rem;
+  padding: 0.4rem 0rem;
+  text-align: center;
+}
+.content .mui-scroll .footer .footbottom .download {
+  height: 0.4266666667rem;
+  font-size: 0.32rem;
+  margin-bottom: 0rem;
+}
+.content .mui-scroll .footer .footbottom .download a {
+  color: #5a5a5a;
+  font-size: 0.32rem;
+}
+.content .mui-scroll .footer .footbottom .download a:nth-child(1) {
+  color: red;
+  margin-right: 0.1333333333rem;
+}
+.content .mui-scroll .footer .footbottom .address {
+  height: 0.36rem;
+  font-size: 0.32rem;
+}
 
 #galleryOverlay {
   display: none;
@@ -182,56 +233,6 @@ body {
 }
 #galleryOverlay.visible {
   opacity: 1;
-}
-
-.bottom {
-  height: 2.56rem;
-  background-color: #efefef;
-}
-.bottom .foot_top {
-  margin-top: 0.6666666667rem;
-  display: flex;
-}
-.bottom .foot_top a {
-  color: #000;
-  height: 0.9066666667rem;
-  text-align: center;
-  width: 2.96rem;
-  border: 1px solid #c4c4c4;
-  line-height: 0.9066666667rem;
-  font-size: 0.3733333333rem;
-}
-.bottom .foot_top a:nth-child(1) {
-  border-left: none;
-}
-.bottom .foot_top a:nth-child(3) {
-  border-right: none;
-  width: 4rem;
-}
-.bottom .foot_top a:nth-child(3) img {
-  width: 0.4rem;
-  display: inline-block;
-}
-.bottom .foot_di .box {
-  padding: 0.4933333333rem 0;
-}
-.bottom .foot_di .box p {
-  text-align: center;
-  margin: 0;
-  line-height: 0.48rem;
-}
-.bottom .foot_di .box p .app {
-  color: #ff0000;
-}
-.bottom .foot_di .box p .man {
-  color: #000000;
-}
-.bottom .foot_di .box p:nth-child(1) {
-  font-size: 0.32rem;
-}
-.bottom .foot_di .box p:nth-child(2) {
-  font-size: 0.2666666667rem;
-  line-height: 0.3466666667rem;
 }
 
 /*# sourceMappingURL=list.css.map */

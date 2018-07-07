@@ -78,7 +78,7 @@ $(function () {
                     //把值赋给上一级
                     $(".left .shop").html($(this).text());
                     shopId = $(this).data("shopid")
-                    window.location.href = "coudan.html?area=" + areaId + "&site=" + shopId
+                    window.location.href = "gsproduct.html?area=" + areaId + "&site=" + shopId
 
                 })
 
@@ -125,7 +125,7 @@ $(function () {
                     //把值赋给上一级
                     $(".left .area").html($(this).text());
                     areaId = $(this).data("areaid")
-                    window.location.href = "coudan.html?area=" + areaId + "&site=" + shopId
+                    window.location.href = "gsproduct.html?area=" + areaId + "&site=" + shopId
                 })
 
 

@@ -129,7 +129,19 @@ body {
                 border: pr(1) solid #ccc;
                 height: 100%;
                 ul {
+                    width: 100%;
                     display: none;
+                    li{
+                        width: 33.3333333333%;
+                        float: left;
+                        height: pr(80);
+                        text-align: center;
+                        line-height: pr(80);
+                       border: 1px solid #ccc;
+                       a {
+                           color: #000;
+                       }
+                    }
                     &.active {
                         display: block;
                     }
@@ -171,32 +183,6 @@ body {
                     line-height: pr(80); //vertical-align: center;
                     &:nth-child(3n) {
                         border-right: none;
-                    }
-                }
-
-                
-                .secall {
-                    width: 100%;
-                    tbody {
-                        display: block;
-                        width: 100%;
-                        tr {
-                            background-color: #fff;
-                            display: block;
-                            width: 100%;
-                            border-bottom: pr(1) solid #ccc;
-                            td {
-                                display: inline-block;
-                                height: pr(80);
-                                line-height: pr(80);
-                                width: 32%;
-                                border-right: pr(1) solid #ccc;
-                                text-align: center; //vertical-align: center;
-                                &:nth-child(3n) {
-                                    border-right: none;
-                                }
-                            }
-                        }
                     }
                 }
             }

@@ -4,7 +4,6 @@ $(function () {
         // alert(1);
         window.history.go(-1);
     })
-
 // 地址栏解析
     function parseURL(url) {
         var result = [];
@@ -19,8 +18,8 @@ $(function () {
         return params;
     }
 
-    var  params = parseURL(window.location.href);
-    var productid =params.productid;
+    // var  params = parseURL(window.location.href);
+    // var productid =params.productid;
 
 
     // 发送ajax请求
@@ -29,7 +28,7 @@ $(function () {
     data:{productid :20},
     type:'GET',
     success:function (backData) {
-    // console.log(backData);
+    console.log(backData);
     var result=template('productinfo',backData)
     $('main').html(result);
     }

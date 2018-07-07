@@ -16,12 +16,12 @@ $(function () {
                 
 
                 if ($(this).children('span').hasClass("mui-icon-arrowdown")) {
-                    // alert(1)
+                   
                     $(this).children('span').addClass("mui-icon-arrowup").removeClass("mui-icon-arrowdown");
                 } else {
                     $(this).children("span").addClass("mui-icon-arrowdown").removeClass("mui-icon-arrowup")
 
-                    // alert(2)
+                   
                 }
                 $(list).toggleClass("active")
                 $(list).siblings().removeClass("active");

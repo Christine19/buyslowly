@@ -116,7 +116,19 @@ body {
   height: 100%;
 }
 .container .mui-scroll .box .list ul {
+  width: 100%;
   display: none;
+}
+.container .mui-scroll .box .list ul li {
+  width: 33.3333333333%;
+  float: left;
+  height: 1.0666666667rem;
+  text-align: center;
+  line-height: 1.0666666667rem;
+  border: 1px solid #ccc;
+}
+.container .mui-scroll .box .list ul li a {
+  color: #000;
 }
 .container .mui-scroll .box .list ul.active {
   display: block;
@@ -155,30 +167,6 @@ body {
   line-height: 1.0666666667rem;
 }
 .container .mui-scroll .box .seccategory a:nth-child(3n) {
-  border-right: none;
-}
-.container .mui-scroll .box .seccategory .secall {
-  width: 100%;
-}
-.container .mui-scroll .box .seccategory .secall tbody {
-  display: block;
-  width: 100%;
-}
-.container .mui-scroll .box .seccategory .secall tbody tr {
-  background-color: #fff;
-  display: block;
-  width: 100%;
-  border-bottom: 0.0133333333rem solid #ccc;
-}
-.container .mui-scroll .box .seccategory .secall tbody tr td {
-  display: inline-block;
-  height: 1.0666666667rem;
-  line-height: 1.0666666667rem;
-  width: 32%;
-  border-right: 0.0133333333rem solid #ccc;
-  text-align: center;
-}
-.container .mui-scroll .box .seccategory .secall tbody tr td:nth-child(3n) {
   border-right: none;
 }
 .container .footer {
