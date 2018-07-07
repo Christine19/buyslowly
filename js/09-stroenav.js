@@ -4,6 +4,10 @@ $(function () {
         // alert(1);
         window.history.go(-1);
     })
+    // 点击返回顶部
+    // $('.toTop').click(function () {
+  
+    // })
 
 
 
@@ -13,11 +17,11 @@ $(function () {
 
     // 发送ajax请求
     $.ajax({
-    url:'http://m.manmanbuy.com/HzSite.aspx',
+    url:'http://mmb.ittun.com/api/getsitenav',
     data:{},
     type:'GET',
     success:function (backData) {
-    console.log(backData);
+    // console.log(backData);
     var result=template('friendslink',backData)
     $('.friends').html(result);
     }

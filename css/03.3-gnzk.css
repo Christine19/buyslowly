@@ -167,18 +167,18 @@ html, body {
   font-size: 14px;
   color: #ffffff;
 }
-.container main .product .comment {
+.container main .product .cu-content-pl {
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
 }
-.container main .product .comment .tit {
+.container main .product .cu-content-pl .tit {
   height: 40px;
   line-height: 32px;
 }
-.container main .product .comment .form textarea {
+.container main .product .cu-content-pl .form textarea {
   border-bottom: none;
 }
-.container main .product .comment .form .placeholder {
+.container main .product .cu-content-pl .form .ctrl {
   position: relative;
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -189,7 +189,7 @@ html, body {
   height: 40px;
   margin-top: -25px;
 }
-.container main .product .comment .form .placeholder input {
+.container main .product .cu-content-pl .form .ctrl input {
   height: 100%;
   position: absolute;
   top: 0;
@@ -197,36 +197,36 @@ html, body {
   background-color: #ff841d;
   border: 2px solid #ff841d;
 }
-.container main .product .comment .newtit {
+.container main .product .cu-content-pl #newcomment {
   font-size: 16px;
   padding: 6px 8px;
 }
-.container main .product .comment .list {
+.container main .product .cu-content-pl .list {
   padding: 18px 10px;
   background-color: #FFFFFF;
 }
-.container main .product .comment .list ul li {
+.container main .product .cu-content-pl .list ul li {
   margin-bottom: 8px;
 }
-.container main .product .comment .list .userimg {
+.container main .product .cu-content-pl .list .userimg {
   width: 40px;
   float: left;
   overflow: hidden;
   margin-right: 5px;
   margin-bottom: 5px;
 }
-.container main .product .comment .list .userimg img {
+.container main .product .cu-content-pl .list .userimg img {
   width: 100%;
 }
-.container main .product .comment .list .con .clearfix {
+.container main .product .cu-content-pl .list .con .clearfix {
   display: flex;
   justify-content: space-between;
 }
-.container main .product .comment .list .con .clearfix .username {
+.container main .product .cu-content-pl .list .con .clearfix .username {
   color: #96bdd7;
 }
-.container main .product .comment .list .con .content {
-  margin-top: 9px;
+.container main .product .cu-content-pl .list .con .content {
+  margin-top: 5px;
 }
 .container .nav {
   width: 100%;
@@ -304,4 +304,4 @@ html, body {
   color: #666;
 }
 
-/*# sourceMappingURL=02.2-gnzk.css.map */
+/*# sourceMappingURL=03.3-gnzk.css.map */
