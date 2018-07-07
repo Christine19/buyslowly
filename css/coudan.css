@@ -1,7 +1,6 @@
 body {
   background-color: #f1f1f1;
 }
-
 body .top {
   height: 45px;
   background-color: #ff8b00;
@@ -10,18 +9,15 @@ body .top {
   padding: 0px 5px;
   box-shadow: 0px 2px 3px #dddddd;
 }
-
 body .top .mui-icon-back {
   line-height: 45px;
   color: white;
 }
-
 body .top .title {
   line-height: 45px;
   color: white;
   font-size: 20px;
 }
-
 body .top .app {
   display: flex;
   flex-direction: column;
@@ -29,18 +25,15 @@ body .top .app {
   text-decoration: none;
   color: white;
 }
-
 body .top .app .download {
   font-size: 12px;
 }
-
 body .sort {
   height: 38px;
   border-bottom: 1px solid #dadada;
   display: flex;
   background-color: #fff;
 }
-
 body .sort .right {
   flex-basis: 45px;
   line-height: 38px;
@@ -48,13 +41,11 @@ body .sort .right {
   vertical-align: middle;
   color: #565656;
 }
-
 body .sort .left {
   flex: 1;
   display: flex;
   border-right: 1px solid #dadada;
 }
-
 body .sort .left p {
   flex: 1;
   margin: 0;
@@ -65,23 +56,19 @@ body .sort .left p {
   font-size: 15px;
   color: #565656;
 }
-
 body .sort .left p span {
   vertical-align: middle;
 }
-
 body .sort .left p .fa-sort-down {
   font-size: 18px;
   margin-left: 8px;
   margin-bottom: 5px;
 }
-
 body .sort .left p .fa-sort-up {
   font-size: 18px;
   margin-left: 8px;
   margin-bottom: -10px;
 }
-
 body .list {
   display: none;
   position: absolute;
@@ -89,12 +76,10 @@ body .list {
   top: 83px;
   width: 100%;
 }
-
 body .list ul {
   padding: 0px;
   margin: 0;
 }
-
 body .list ul li {
   font-size: 15px;
   color: #565656;
@@ -105,7 +90,6 @@ body .list ul li {
   border-bottom: 1px solid #dadada;
   background-color: #fff;
 }
-
 body .list ul li span {
   float: right;
   line-height: 45px;
@@ -113,28 +97,23 @@ body .list ul li span {
   font-size: 18px;
   font-weight: normal;
 }
-
 body .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 body .products .product {
   width: 50%;
   padding: 10px 5px 10px 10px;
   margin-bottom: -10px;
 }
-
 body .products .product a {
   display: block;
   background-color: #fff;
 }
-
 body .products .product a img {
   width: 100%;
 }
-
 body .products .product a .desc {
   font-size: 12px;
   color: #000;
@@ -143,16 +122,15 @@ body .products .product a .desc {
   height: 21px;
   overflow: hidden;
 }
-
 body .products .product a .price {
   color: red;
   margin: 0;
 }
-
 body .products .product a .price span:nth-child(2) {
   font-size: 20px;
 }
-
 body .products .product:nth-child(2n) {
   padding: 10px 10px 10px 5px;
 }
+
+/*# sourceMappingURL=coudan.css.map */

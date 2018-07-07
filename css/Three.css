@@ -22,6 +22,7 @@ a {
 html, body {
   height: 100%;
   font-size: 14px;
+  background-color: #fff;
 }
 
 .container {
@@ -53,7 +54,7 @@ html, body {
   padding: 0 0.2666666667rem;
   border: 0;
   margin: 0;
-  width: 6.8rem;
+  width: 7.1733333333rem;
   height: 0.7466666667rem;
   font-size: 0.3733333333rem;
   border-radius: 0.1333333333rem;
@@ -89,12 +90,12 @@ html, body {
   color: white;
 }
 .hieBox .getup .area .area-two {
-  font-size: 0.24rem;
+  font-size: 0.5333333333rem;
   font-weight: 700;
   color: white;
 }
 .hieBox .getup .area .area-three .area-four {
-  font-size: 0.1066666667rem;
+  font-size: 0.0666666667rem;
   color: white;
   font-weight: 300;
 }
@@ -106,16 +107,24 @@ html, body {
   flex: 1;
 }
 .hieBox .getcontent .content {
-  margin-top: 0.8rem;
+  margin-top: 0.9333333333rem;
   border-bottom: 0.0266666667rem solid #ccc;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.hieBox .getcontent .content .left {
+  flex-basis: 40%;
+  height: 100%;
+}
+.hieBox .getcontent .content .right {
+  flex: 1;
+}
 .hieBox .getcontent .content .right .sixsix {
   color: orange;
 }
 .hieBox .getcontent .content .right .text {
+  margin-bottom: 0.5333333333rem;
   width: 4rem;
   height: 1.3333333333rem;
   font-size: 0.2133333333rem;

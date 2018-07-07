@@ -4,8 +4,7 @@ $(function(){
    });
 
   
- })
- $(function(){
+
     setTimeout(function() {
                     mui(".mui-scroll-wrapper").pullRefresh().endPulldownToRefresh();
                 }, 1000);
@@ -13,6 +12,7 @@ $(function(){
         {
         pullRefresh : {
           container:".mui-scroll-wrapper",
+         
           down : {
             style:'circle',
             auto: true, //页面刷新自动启动下拉刷新
@@ -26,14 +26,19 @@ $(function(){
     );
 
    
- })
-
-(function() {
-    $('.mui-pagination').on('tap', 'a', function() {
-        $(this).addClass("mui-active").parent().siblings().removeClass("mui-active");
-         alert(this);
-    });
-   
-}); 
+      $.ajax({  
+                url: "http://mmb.ittun.com/api/getmoneyctrl",
+                 data:{pageid:1},
+                 success: function(data) {
+                    //console.log(data);
+                  var html =template('carcontent',data);
+                  $('.moban').html(html);
+                 }
+            });
+        
+          $('.carcontent').on('click',".right",function(){
+              window.location.href ='./03.3-gnzk.html?productId'+id;
+          })  
+   }); 
 
       

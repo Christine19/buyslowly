@@ -43,92 +43,32 @@
       <!-- 内容 -->
       <div class="getcontent">
         <div id="refreshContainer" class=" mui-scroll-wrapper">
-            <div class="mui-scroll">
-                    <ul class="mui-table-view">
+            <div  class="mui-scroll">
+                    <ul class="mui-table-view  moban">
          <!--这里放置真实显示的DOM内容-->
-                           <div class="content">
-                                <div class="left">
-                                   <img src="./参考.png" alt="">
-                                </div>
-                                <div class="right">
-                                     <p>阿迪达斯买不起，买不起，这辈子都买不起<span class="sixsix">贵的一批！！！</span></p>
-                                     <div class="text">
-                                          <div>京东商城|7-6 |7:00</div>
-                                          <div class="mui-icon mui-icon-chat icon"><span>0</span></div>
-                                     </div>
+                   <script type="text/html" id="carcontent">
+                          {{each result}}  
+                          <li class="content">
+                            <div class="left">
+                               {{#$value.productImgSm}}
+                            </div>
+                            <div class="right">
+                                 <p>{{$value.productName}}<span class="sixsix">{{$value.productPinkage}}</span></p>
+                                 <div class="text">
+                                      <div>{{$value.productFrom}} | {{$productTime}}</div>
+                                      <div class="mui-icon mui-icon-chat icon"><span>{{$value.productComCount}}</span></div>
                                  </div>
-                            </div>        
-                            <div class="content">
-                                <div class="left">
-                                   <img src="./参考.png" alt="">
-                                </div>
-                                <div class="right">
-                                     <p>阿迪达斯买不起，买不起，这辈子都买不起<span class="sixsix">贵的一批！！！</span></p>
-                                     <div class="text">
-                                          <div>京东商城|7-6 |7:00</div>
-                                          <div class="mui-icon mui-icon-chat icon"><span>0</span></div>
-                                     </div>
-                                 </div>
-                            </div>        
-                            <div class="content">
-                                <div class="left">
-                                   <img src="./参考.png" alt="">
-                                </div>
-                                <div class="right">
-                                     <p>阿迪达斯买不起，买不起，这辈子都买不起<span class="sixsix">贵的一批！！！</span></p>
-                                     <div class="text">
-                                          <div>京东商城|7-6 |7:00</div>
-                                          <div class="mui-icon mui-icon-chat icon"><span>0</span></div>
-                                     </div>
-                                 </div>
-                            </div>        
-                            <div class="content">
-                                <div class="left">
-                                   <img src="./参考.png" alt="">
-                                </div>
-                                <div class="right">
-                                     <p>阿迪达斯买不起，买不起，这辈子都买不起<span class="sixsix">贵的一批！！！</span></p>
-                                     <div class="text">
-                                          <div>京东商城|7-6 |7:00</div>
-                                          <div class="mui-icon mui-icon-chat icon"><span>0</span></div>
-                                     </div>
-                                 </div>
-                            </div>        
-                            <div class="content">
-                                <div class="left">
-                                   <img src="./参考.png" alt="">
-                                </div>
-                                <div class="right">
-                                     <p>阿迪达斯买不起，买不起，这辈子都买不起<span class="sixsix">贵的一批！！！</span></p>
-                                     <div class="text">
-                                          <div>京东商城|7-6 |7:00</div>
-                                          <div class="mui-icon mui-icon-chat icon"><span>0</span></div>
-                                     </div>
-                                 </div>
-                            </div>        
-                            <div class="content">
-                                <div class="left">
-                                   <img src="./参考.png" alt="">
-                                </div>
-                                <div class="right">
-                                     <p>阿迪达斯买不起，买不起，这辈子都买不起<span class="sixsix">贵的一批！！！</span></p>
-                                     <div class="text">
-                                          <div>京东商城|7-6 |7:00</div>
-                                          <div class="mui-icon mui-icon-chat icon"><span>0</span></div>
-                                     </div>
-                                 </div>
-                               </div> 
-                            </ul>       
-                      </div>
-                </div>
-          </div>
-     
+                             </div>
+                            </li>        
+                          {{/each}}  
+               </script>
+                   
                      
        <!-- 底部  -->                                                
        <div class="getbottom">
-            <div class="mui-content-padded">
-                    <ul class="mui-pagination mui-pagination-sm">
-                        <li class="mui-previous">
+            <div class="mui-content-padded  page">
+                    <ul class="mui-pagination mui-pagination-sm"  >
+                        <li class="mui-previous mui-active" >
                             <a href="#">
                                 上一页
                             </a>
@@ -143,7 +83,7 @@
                                 2
                             </a>
                         </li>
-                        <li class="mui-active">
+                        <li >
                             <a href="#">
                                 3
                             </a>

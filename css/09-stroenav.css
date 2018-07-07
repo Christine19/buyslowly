@@ -22,6 +22,7 @@ a {
 html, body {
   height: 100%;
   font-size: 14px;
+  background-color: #fff;
 }
 
 .container {
@@ -53,7 +54,7 @@ html, body {
   padding: 0 0.2666666667rem;
   border: 0;
   margin: 0;
-  width: 6.8rem;
+  width: 7.1733333333rem;
   height: 0.7466666667rem;
   font-size: 0.3733333333rem;
   border-radius: 0.1333333333rem;
