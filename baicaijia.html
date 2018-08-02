@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价首页</title>
+    <!-- zepto js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+
+    <script src="./lib/mui/js/mui.min.js"></script>
+
+    <script src="./lib/swiper/swiper.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 自己写的js -->
+    <script src="./js/common.js"></script>
+
+    <script src="./js/bargain.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <!-- mui css -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+    <!-- 自己写的css 这个css不要轻易修改 如果公共部分不同到自己的css里写权重比他高就可以改的到-->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="./css/bargain.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <!-- logo不同到官网看 -->
+            <a class="logo">白菜价</a>
+            <div class="searchbar">
+                <input type="text" placeholder="好宝贝 等你搜" name="key">
+            </div>
+            <a href="" class="icon">
+                <!-- 字体图标根据页面不同自己到官网看 -->
+                <span class="mui-icon mui-icon-bars"></span>
+            </a>
+        </div>
+        <!-- 主要内容 -->
+        <div class="content">
+            <!-- 内部滚动 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <!-- 轮播图 -->
+                    <!-- Swiper -->
+                    <div class="banner">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./img/1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./img/1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./img/2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./img/3.jpg" alt="">
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- 热销 -->
+                    <div class="hot">
+                        <a href="">
+                            <img src="./img/logo1_07.jpg" alt="">
+                            <span>热销</span>
+                        </a>
+                        <a href="">
+                            <img src="./img/logo2_07.jpg" alt="">
+                            <span>9.9包邮</span>
+                        </a>
+                        <a href="">
+                            <img src="./img/logo3_07.jpg" alt="">
+                            <span>19块包邮</span>
+                        </a>
+                        <a href="">
+                            <img src="./img/logo4_07.jpg" alt="">
+                            <span>超级人气榜</span>
+                        </a>
+                    </div>
+                    <!-- 人气榜 -->
+                    <div class="popular">
+                        <!-- 标题 -->
+                        <div class="top">
+                            <h3>超级人气榜</h3>
+                            <a href="" class="title">更多</a>
+                        </div>
+                        <!-- 详细内容 -->
+                        <div class="bottom">
+                            <!-- 轮播图 -->
+                            <div class="swiper-container1">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <img src="./img/hot1.jpg" alt="">
+                                            <p>【修正】草本喷剂</p>
+                                            <p class="price">
+                                                <span class="old">￥5.6</span>
+                                                <span class="text">卷后</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <img src="./img/hot2.jpg" alt="">
+                                            <p>【修正】草本喷剂</p>
+                                            <p class="price">
+                                                <span class="old">￥5.6</span>
+                                                <span class="text">卷后</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <img src="./img/hot3.jpg" alt="">
+                                            <p>【修正】草本喷剂</p>
+                                            <p class="price">
+                                                <span class="old">￥5.6</span>
+                                                <span class="text">卷后</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <img src="./img/hot5.jpg" alt="">
+                                            <p>【修正】草本喷剂</p>
+                                            <p class="price">
+                                                <span class="old">￥5.6</span>
+                                                <span class="text">卷后</span>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <img src="./img/hot1.jpg" alt="">
+                                            <p>【修正】草本喷剂</p>
+                                            <p class="price">
+                                                <span class="old">￥5.6</span>
+                                                <span class="text">卷后</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  -->
+
+                    <div class="discounts">
+                        <!-- 标题 -->
+                        <div class="top">
+                            <h3>商家优惠信息 实时直播</h3>
+                            <span class="title">8571</span>
+                        </div>
+                        <!-- 详细内容 -->
+                        <div class="bottom">
+                            <ul>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover1.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover1.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover2.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover3.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover4.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover1.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover1.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cover">
+                                        <img src="./img/cover1.jpg" alt="">
+                                        <span class="coupon">券￥10</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="titles intro mui-ellipsis-2"> CEENLGOER 橙歌 CG818 女士动漫印花时尚套装</p>
+                                        <span class="text">券后</span>
+                                        <span class="price">￥49.00</span>
+                                        <div class="sold">
+                                            <span class="num">43</span>
+                                            <span class="text">人已买</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div class="foot_top">
+                            <a href="">登录</a>
+                            <a href="">注册</a>
+                            <a href="">
+                                <img src="./img/top.jpg" alt="">返回顶部</a>
+                        </div>
+                        <div class="foot_di">
+                            <div class="box">
+                                <p>
+                                    <span class="app">手机APP下载</span>
+                                    <span class="man">
+                                        慢慢买手机版</span> -- 掌上比价平台</p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--这里放置真实显示的DOM内容-->
+                </div>
+            </div>
+        </div>
+        <!-- 遮罩层 分类-->
+        <div class="category active">
+            <!-- 遮罩层 -->
+            <div class="mask"></div>
+            <!-- 分类列表 -->
+            <div class="category-content">
+                <ul class="categories">
+                    <li>
+                        <a href="">全部</a>
+                    </li>
+                    <li>
+                        <a href="">热销</a>
+                    </li>
+                    <li>
+                        <a href="">9块9包邮</a>
+                    </li>
+                    <li>
+                        <a href="">19块邮</a>
+                    </li>
+                    <li>
+                        <a href="">数码家电</a>
+                    </li>
+                    <li>
+                        <a href="">居家</a>
+                    </li>
+                    <li>
+                        <a href="">美食</a>
+                    </li>
+                    <li>
+                        <a href="">男装</a>
+                    </li>
+                    <li>
+                        <a href="">女装</a>
+                    </li>
+                    <li>
+                        <a href="">鞋包配饰</a>
+                    </li>
+                    <li>
+                        <a href="">文体</a>
+                    </li>
+                    <li>
+                        <a href="">母婴</a>
+                    </li>
+                    <li>
+                        <a href="">美妆</a>
+                    </li>
+                    <li>
+                        <a href="">玩具</a>
+                    </li>
+
+
+                    <!-- 分类模板 -->
+                    <script type="text/html" id="categoriesid">
+                        {{each result}}
+                        <li>
+                            <a href="javascript: goto('bargainlist.html?titleid={{$value.titleId}}');">{{$value.title}}</a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+                <span class="upmenu">收起分类</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
+    var swiper1 = new Swiper('.swiper-container1', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>

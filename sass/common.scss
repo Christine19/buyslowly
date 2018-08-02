@@ -19,7 +19,10 @@ a{
 html,body{
     height: 100%;
     font-size: 14px;
+    background-color: #fff;
+    
 }
+
 
 @function pr($p) {
     @return $p/75+rem;
@@ -59,7 +62,7 @@ html,body{
                 padding: 0 pr(20);
                 border: 0;
                 margin: 0;
-                width: pr(510);
+                width: pr(538);
                 height: pr(56);
                 font-size: pr(28);
                 border-radius: pr(10);
@@ -81,6 +84,6 @@ html,body{
     .content{
         flex: 1;
         position: relative;
-        
+              
     }
 }

@@ -1,209 +1,57 @@
-html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, p, b {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/*
+Error: Invalid CSS after "    height: 100%": expected "{", was ";"
+        on line 66 of sass/search.scss
 
-ul {
-  list-style: none;
-}
+61: }
+62: 
+63: html,
+64: body {
+65: >>>>>>> 577e14f1a3f6bd86db010786faafc555a3ce42ac
+66:     height: 100%;
+67:     font-size: 14px;
+68: }
+69: 
+70: @function pr($p) {
+71:     @return $p/75+rem;
 
-input {
-  vertical-align: middle;
-  border: 0;
-  outline: none;
-}
-
-a {
-  text-decoration: none;
-  color: #9a9a9a;
-}
-
-html, body {
-  height: 100%;
-  font-size: 14px;
-}
-
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.container .mui-scroll .topbar {
-  background-color: #ff841d;
-  height: 1.3333333333rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.container .mui-scroll .topbar .logo {
-  height: 100%;
-  padding: 0.3333333333rem 0.1333333333rem;
-}
-.container .mui-scroll .topbar .logo a img {
-  width: 4.96rem;
-  margin-left: 0.4rem;
-}
-.container .mui-scroll .topbar .appload {
-  padding: 0.2rem 0.16rem;
-  height: 100%;
-}
-.container .mui-scroll .topbar .appload a img {
-  width: 0.9066666667rem;
-}
-.container .mui-scroll .searchbar {
-  height: 1.36rem;
-  border-bottom: 0.0133333333rem solid #ccc;
-  background-color: #fff;
-  padding: 0.2666666667rem;
-  position: relative;
-}
-.container .mui-scroll .searchbar .search {
-  height: 0.8rem;
-  background-color: #f1f1f1;
-  border-radius: 0.4rem;
-  border: none;
-  outline: none;
-  padding: 0rem 0.5333333333rem;
-}
-.container .mui-scroll .searchbar .ssbtn {
-  position: absolute;
-  height: 0.8rem;
-  width: 1.6933333333rem;
-  background-color: #ff841d;
-  border-radius: 0.4rem;
-  right: 0.2666666667rem;
-  top: 0.2666666667rem;
-  color: #fff;
-}
-.container .mui-scroll .box {
-  width: 100%;
-  position: relative;
-  padding: 0.1333333333rem 0.1333333333rem 0rem 0.1333333333rem;
-}
-.container .mui-scroll .box .list {
-  width: 100%;
-  border: 0.0133333333rem solid #ccc;
-  height: 100%;
-}
-.container .mui-scroll .box .list .dropdown-toggle {
-  width: 100%;
-  height: 1.0933333333rem;
-  border-bottom: 0.0133333333rem solid #ccc;
-  padding-left: 0.4266666667rem;
-  padding-right: 0.2933333333rem;
-  font-size: 0.4666666667rem;
-  font-weight: bolder;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.container .mui-scroll .box .list .dropdown-toggle .categotytitle {
-  color: #000;
-}
-.container .mui-scroll .box .list .dropdown-toggle .mui-icon-arrowdown {
-  color: #9d9d9d;
-}
-.container .mui-scroll .box .seccategory {
-  background-color: #fff;
-  width: 100%;
-  border-bottom: 0.04rem solid #888888;
-  display: flex;
-  flex-wrap: wrap;
-}
-.container .mui-scroll .box .seccategory a {
-  width: 33.33333%;
-  height: 1.0666666667rem;
-  border-bottom: 0.0133333333rem solid #ccc;
-  border-right: 0.0133333333rem solid #ccc;
-  text-align: center;
-  line-height: 1.0666666667rem;
-}
-.container .mui-scroll .box .seccategory a:nth-child(3n) {
-  border-right: none;
-}
-.container .mui-scroll .box .seccategory .secall {
-  width: 100%;
-}
-.container .mui-scroll .box .seccategory .secall tbody {
-  display: block;
-  width: 100%;
-}
-.container .mui-scroll .box .seccategory .secall tbody tr {
-  background-color: #fff;
-  display: block;
-  width: 100%;
-  border-bottom: 0.0133333333rem solid #ccc;
-}
-.container .mui-scroll .box .seccategory .secall tbody tr td {
-  display: inline-block;
-  height: 1.0666666667rem;
-  line-height: 1.0666666667rem;
-  width: 32%;
-  border-right: 0.0133333333rem solid #ccc;
-  text-align: center;
-}
-.container .mui-scroll .box .seccategory .secall tbody tr td:nth-child(3n) {
-  border-right: none;
-}
-.container .footer {
-  display: flex;
-  flex-direction: column;
-  height: 2.56rem;
-  margin-top: 0.6666666667rem;
-}
-.container .footer .foottop {
-  border-top: 0.0133333333rem solid #ccc;
-  border-bottom: 0.0133333333rem solid #ccc;
-  height: 0.9066666667rem;
-  display: flex;
-  align-items: center;
-}
-.container .footer .foottop a {
-  display: inline-block;
-  height: 100%;
-  font-size: 0.3733333333rem;
-  width: 30%;
-  text-align: center;
-  line-height: 0.9066666667rem;
-  border-right: 0.0133333333rem solid #c4c4c4;
-}
-.container .footer .foottop a:nth-child(3) {
-  border-right: none;
-  padding-left: 0.8rem;
-}
-.container .footer .foottop a:nth-child(3) img {
-  height: 0.3733333333rem;
-}
-.container .footer .footbottom {
-  height: 1.6rem;
-  padding: 0.4rem 0rem;
-  text-align: center;
-}
-.container .footer .footbottom .download {
-  height: 0.4266666667rem;
-  font-size: 0.32rem;
-  margin-bottom: 0rem;
-}
-.container .footer .footbottom .download a {
-  color: #5a5a5a;
-  font-size: 0.32rem;
-}
-.container .footer .footbottom .download a:nth-child(1) {
-  color: red;
-  margin-right: 0.1333333333rem;
-}
-.container .footer .footbottom .address {
-  height: 0.36rem;
-  font-size: 0.32rem;
-}
-
-/*# sourceMappingURL=search.css.map */
+Backtrace:
+sass/search.scss:66
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:677:in `block'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:686:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    height: 100%\": expected \"{\", was \";\"\A         on line 66 of sass/search.scss\A \A 61: }\A 62: \A 63: html,\A 64: body {\A 65: >>>>>>> 577e14f1a3f6bd86db010786faafc555a3ce42ac\A 66:     height: 100%;\A 67:     font-size: 14px;\A 68: }\A 69: \A 70: @function pr($p) {\A 71:     @return $p/75+rem;"; }

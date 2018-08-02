@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品</title>
+    <!-- 引入zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入mui的css -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入mui的js -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入字体图片 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <!-- 引入公共的js -->
+    <script src="./js/common.js"></script>
+    <!-- 引入自己的js -->
+    <script src="./js/coudan.js"></script>
+    <!-- 引入公共的css -->
+    <link rel="stylesheet" href="./css/coudan.min.css">
+    <!-- 引入自己的css -->
+    <link rel="stylesheet" href="./css/coudan.min.css">
+
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <a href="javascript: back();">
+
+            <span class="mui-icon mui-icon-back"></span>
+        </a>
+        <span class="title">凑单品</span>
+        <a class="app">
+            <span class="mui-icon mui-icon-download"></span>
+            <span class="download">APP下载</span>
+        </a>
+    </div>
+    <!-- 分类 -->
+    <div class="sort">
+        <div class="left">
+            <p class="sort1">
+                <span class="shop">京东</span>
+                <span class="fa fa-sort-down "></span>
+            </p>
+
+            <p class="sort2">
+                <span class="area">华北</span>
+                <span class="fa fa-sort-down "></span>
+            </p>
+
+            <p>
+                <span>全部价格</span>
+                <span class="fa fa-sort-down "></span>
+            </p>
+
+        </div>
+        <div class="right">
+            <span class="fa fa-search"></span>
+        </div>
+    </div>
+    <!-- 列表 -->
+    <div class="list">
+        <ul>
+            <li>京东
+                <span class="fa fa-check"></span>
+            </li>
+        </ul>
+    </div>
+    <!-- 产品 -->
+    <div class="products">
+
+        <div class="product">
+            <a href="">
+                <img src="./images/pro.jpg" alt="">
+                <p class="desc">陈克明 面条 鸡蛋龙须挂面 150g</p>
+                <p class="price">
+                    <span>¥</span>
+                    <span>1.00</span>
+                </p>
+            </a>
+        </div>
+
+    </div>
+    <!-- 按照shopId分类的模板引擎 -->
+    <script type="text/html" id="lists">
+        <ul>
+            {{each result}}
+
+            <li data-shopID="{{$value.shopId}}">
+                {{$value.shopName}} {{if $value.shopId==shopId}}
+                <span class="fa fa-check"></span>
+                {{/if}}
+            </li>
+
+            {{/each}}
+        </ul>
+
+    </script>
+
+    <!-- 按照areaId分类的模板引擎 -->
+    <script type="text/html" id="arealists">
+        <ul>
+            {{each result}}
+
+            <li data-areaid="{{$value.areaId}}">
+                {{$value.areaName}} {{if $value.areaId==areaId}}
+                <span class="fa fa-check"></span>
+                {{/if}}
+            </li>
+
+            {{/each}}
+        </ul>
+
+    </script>
+
+    <!-- 产品模板引擎 -->
+    <script type="text/html" id="prolists">
+        {{each result}}
+        <div class="product">
+            <a href="">
+                <img src="{{$value.productImg}}" alt="">
+                <p class="desc">{{$value.productName}}</p>
+                <p class="price">
+                    <span>¥</span>
+                    <span>{{$value.productPrice}}</span>
+                </p>
+            </a>
+        </div>
+        {{/each}}
+
+    </script>
+
+
+
+
+</body>
+
+</html>

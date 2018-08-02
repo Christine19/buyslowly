@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入Mui -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!--  -->
+    <script src="./js/common.js"></script>
+    <script src="./js/03.3-gnzk.js"></script>
+    <link rel="stylesheet" href="./css/03.3-gnzk.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 头部 -->
+                <header>
+                    <span class="mui-icon mui-icon-back"></span>
+                    <h1>国内折扣</h1>
+                    <a>
+                        <span class="mui-icon mui-icon-download"></span>
+                        <span>APP下载</span>
+                    </a>
+
+                </header>
+                <!-- 主体 -->
+                <main>
+                    <!-- 动态渲染模板S -->
+                    <script id="productinfo" type="text/html">
+                        {{each result}}
+
+                        <div class="product">
+                            <!-- 标题部 -->
+                            <h3>{{$value.productName}}</h3>
+                            <h4>{{$value.productPinkage}}</h4>
+                            <!-- 信息部 -->
+                            <div class="info">
+                                <span class="mall">{{$value.productFrom}}</span>
+                                <span class="addtime" style="margin-right: 4px;">{{$value.productTime}}</span>
+                                <span class="author">{{$value.productTips}}</span>
+                            </div>
+                            <!-- 内容 -->
+                            <div class="content clearfix">
+
+                                <div class="picwrap">
+                                    {{#$value. productImgSm}}
+                                </div>
+
+                                <div class="conn">
+                                    <!--内容开始-->
+                                    <p>{{$value.productInfo}}</p>
+                                    <p itemprop='description'>
+                                        <a href='http://www.manmanbuy.com/redirectUrl.aspx?spid=0&webid=1&tourl=https%3a%2f%2fitem.jd.com%2f5700036.html' target='_blank'>京东</a>{{$value.productInfo1}}</p>
+                                    <!--内容结束-->
+                                </div>
+                            </div>
+                            <!-- 前往购买 -->
+                            <div class="golink">
+                                <a href="redirect.aspx?webid=1&amp;tourl=https%3a%2f%2fitem.jd.com%2f5700036.html&amp;y=cu&amp;cxid=349212" target="_blank"
+                                    class="a-gobuy">
+                                    <i class="icon-gobuy">
+                                    </i>前往购买</a>
+                            </div>
+                            <!-- 评论区 -->
+                           {{#$value.productComment}}
+                        </div>
+                        {{/each}}
+                    </script>
+                    <!-- 动态渲染模板E -->
+
+                </main>
+                <div class="nav">
+                    <a href="./index.html">首页</a>
+                    &nbsp;&gt;&nbsp;
+                    <a href="./09-stroenav.html">省钱控</a>
+                    &nbsp;&gt;&nbsp;
+                    <a href="./03.3-gnzk.html">3COLOUR 三彩 D742185D00 女士羊毛大衣</a>
+                </div>
+                <footer>
+                    <div class="top">
+                        <a class="login">登录</a>
+                        <a class="regist">注册</a>
+                        <a href="" class="toTop">
+                            <div>
+                                <img src="./images/top.jpg" alt="">
+                            </div>
+                            <span>返回顶部</span>
+                        </a>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            <a href="">手机APP下载</a>
+                            <a href="">慢慢买手机版</a>
+                            <a>--掌上比价平台</a>
+                        </p>
+                        <p> m.manmanbuy.com </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
